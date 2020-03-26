@@ -14,9 +14,6 @@ function App() {
     console.log(lista.tarefa);
   }
 
-  function isComplete(event) {
-    
-  }
 
   function remove(item) {
      setLista(lista.filter(x=>x != item))
@@ -37,7 +34,7 @@ function App() {
 
       <ul>
         {lista.map(item =>
-          <li onClick={isComplete}>
+          <li>
             <input type="checkbox" className="check"/>
             {item}
             <span onClick={() => remove(item)} className="close"><FiTrash2 /></span>
